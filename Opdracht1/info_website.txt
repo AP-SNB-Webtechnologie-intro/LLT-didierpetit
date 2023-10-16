@@ -1,0 +1,28 @@
+Onderwerp: Bakken met desem
+Naam website: De bakkerie
+Onderverdeling structuur:
+Home
+Over desem
+Ontstaan
+Voordelen
+Desem maken
+Bakken met desem
+Toebehoren
+Recepten
+Contact
+
+Te gebruiken API’s:
+https://apilist.fun/api/food-api
+https://apilist.fun/api/nutritionix
+https://apilist.fun/api/ebay-shopping-api
+
+Bronnen:
+https://uitdekeukenvanarden.blogspot.com/
+https://www.theclevercarrot.com/
+https://www.thekitchn.com/how-to-make-sourdough-bread-224367
+https://www.theperfectloaf.com/guides/shaping-bread-dough/
+https://www.desemenzo.nl/
+https://www.voedingscentrum.nl/nl/service/vraag-en-antwoord/gezonde-voeding-en-voedingsstoffen/is-zuurdesembrood-gezonder-dan-gewoon-brood-.aspx
+https://en.wikipedia.org/wiki/Sourdough
+https://www.kingarthurbaking.com/recipes/rustic-sourdough-bread-recipe
+https://www.feastingathome.com/sourdough-bread/
