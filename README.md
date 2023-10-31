@@ -82,7 +82,7 @@ Als laatste zorg je dat je website gehost wordt als een Github Pages website (wo
 >   - teksten, afbeeldingen, titels, ...
 > - [ ] Onderzoek stijlen van de concurrentie
 >   - bekijk andere websites die over een gelijkaardig thema gaan
-
+ - 9 pagina's
 </details>
 
 ---
