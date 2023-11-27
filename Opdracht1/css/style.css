@@ -11,6 +11,14 @@ html, body {
     margin: auto;
   }
 
+.bigtitle_black{
+    font-size: 100px;
+    color: black;
+}
+.bigtitle_green{
+    font-size: 100px;
+    color: #7E805D;
+}
 
 .active {
     color: #d821a4;
@@ -43,7 +51,7 @@ html, body {
     padding: 10px; 
     bottom: 20px;
     width: 100%;
-    padding-top: 1px;
+    padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
