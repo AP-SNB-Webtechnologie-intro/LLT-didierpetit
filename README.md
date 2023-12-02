@@ -44,8 +44,8 @@ Je kan een grotere lijst vinden op websites als [apilist.fun](https://apilist.fu
 
 Je website bevat verschillende pagina's:
  - **home** (`index.html`): 1 pagina met een beschrijving van jouw onderwerp. Deze pagina *moet* bevatten:
-   - een sfeerbeeld
-   - een uitleg over jezelf in de context van het onderwerp
+   - een sf
+   - een uitleg over jeeerbeeldzelf in de context van het onderwerp
    - een foto van jezelf
  - **overzicht** (`overzicht.html`): 1 pagina met een overzicht van 6 topics die verband houden met jouw onderwerp. Deze pagina *moet* voor *elk topic* bevatten:
    - een titel, waar je op kan klikken om op een detailpagina terecht te komen
