@@ -4,7 +4,7 @@ Zoek naar de correct url met endpopint waarbij je 20 resultaten van hot-coffee-r
 Test of je de correcte endpoint hebt in Postman. Pas nadien "fetch" je de correcte link naar de API in de code hieronder.
 */
 
-fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a44618e77c3a321e133cd&query=bread')
+fetch('https://api.sampleapis.com/coffee/hot/?results=20')
     // maak van het antwoord een JSON antwoord
     .then(response => response.json())
     // lees de json uit en zet om naar HTML
@@ -26,7 +26,10 @@ fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a4461
               </h2>
               <div id="collapse${recipe.id}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-              <img src="${recipe.image}" style="max-height: 150px;" class="float-start img-sm p-3" alt=""></div>
+              <img src="${recipe.image}" style="max-height: 150px;" class="float-start img-sm p-3" alt=""><span class="h6 mt-2 koffiebruin">ingrediënten</span>:
+               ${recipe.ingredients} <hr>
+               <span class="h6 mt-2 koffiebruin">bereiding</span>:
+               ${recipe.description}</div>
             </div>
       </div>`;
         }
