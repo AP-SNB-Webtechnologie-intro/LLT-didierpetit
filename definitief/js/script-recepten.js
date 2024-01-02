@@ -4,7 +4,7 @@ Zoek naar de correct url met endpopint waarbij je 20 resultaten van hot-coffee-r
 Test of je de correcte endpoint hebt in Postman. Pas nadien "fetch" je de correcte link naar de API in de code hieronder.
 */
 
-fetch('https://api.sampleapis.com/coffee/hot/?results=20')
+fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a44618e77c3a321e133cd&query=bread')
     // maak van het antwoord een JSON antwoord
     .then(response => response.json())
     // lees de json uit en zet om naar HTML
