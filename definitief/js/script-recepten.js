@@ -1,7 +1,7 @@
 fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a44618e77c3a321e133cd&query=bread')
     .then(response => response.json())
     .then(data => {
-        const recipes = data.results || []; // Controleer of de eigenschap results bestaat
+        const recipes = data.results || data; // Controleer verschillende mogelijke API-structuren
         let html = '<div class="accordion accordion-flush" id="accordionExample">';
 
         for (let recipe of recipes) {
@@ -14,8 +14,8 @@ fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a4461
                         <div id="collapse${recipe.id}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <img src="${recipe.image}" style="max-height: 150px;" class="float-start img-sm p-3" alt="">
-                                <span class="h6 mt-2">ingrediënten</span>: ${recipe.usedIngredients.map(ingredient => ingredient.name).join(', ')} <hr>
-                                <span class="h6 mt-2">bereiding</span>: ${recipe.instructions}
+                                <span class="h6 mt-2">ingrediënten</span>: ${getIngredients(recipe)} <hr>
+                                <span class="h6 mt-2">bereiding</span>: ${recipe.instructions || 'Geen instructies beschikbaar.'}
                             </div>
                         </div>
                     </div>`;
@@ -25,3 +25,14 @@ fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a4461
         document.getElementById("recepten").innerHTML = html;
     })
     .catch(error => console.error('Error fetching data:', error));
+
+// Functie om ingrediënten op te halen op basis van de API-structuur
+function getIngredients(recipe) {
+    if (recipe.extendedIngredients) {
+        return recipe.extendedIngredients.map(ingredient => ingredient.originalString).join(', ');
+    } else if (recipe.ingredients) {
+        return recipe.ingredients.join(', ');
+    } else {
+        return 'Geen ingrediënten beschikbaar.';
+    }
+}
