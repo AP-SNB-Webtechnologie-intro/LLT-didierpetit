@@ -14,8 +14,8 @@ fetch('https://api.spoonacular.com/recipes/complexSearch?apiKey=9ade122b896a4461
                         <div id="collapse${recipe.id}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <img src="${recipe.image}" style="max-height: 150px;" class="float-start img-sm p-3" alt="">
-                                <span class="h6 mt-2 koffiebruin">ingrediënten</span>: ${recipe.usedIngredients.map(ingredient => ingredient.name).join(', ')} <hr>
-                                <span class="h6 mt-2 koffiebruin">bereiding</span>: ${recipe.instructions}
+                                <span class="h6 mt-2">ingrediënten</span>: ${recipe.usedIngredients.map(ingredient => ingredient.name).join(', ')} <hr>
+                                <span class="h6 mt-2">bereiding</span>: ${recipe.instructions}
                             </div>
                         </div>
                     </div>`;
