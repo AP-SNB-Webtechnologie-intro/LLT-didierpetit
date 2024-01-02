@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broodnodig - onstaan</title>
+<meta name="description" content="Website over het bakken van natuurbrood met desem">
+<meta name="keywords" content="brood, broodbakken, broodmes, broodnodig, tarwe, rogge, spelt, mais, desem, zuurddesem, levin, voordeeg, moederdeeg">
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+ <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ <!-- JavaScript: Bootstrap Bundle with Popper -->
+ <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <!-- eigen geschreven css voor jouw html-bestand -->
+ <link href="./css/style.css" rel="stylesheet">
+ <!-- LEAFLET -->
+ <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="  crossorigin=""/>
+ <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+ <link rel="stylesheet" href="css/mapStyle.css">
+ <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+ <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+<script defer src="js/sourd_orig.js"></script>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example col-12 col-md-9 col-sm-6 col-md-4 mx-auto" style="font-family: sans-serif">
+    <nav class="navbar navbar-expand-lg text-uppercase" >
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse active" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: black" aria-current="page" href="index.html">home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: black" href="overzicht.html">overzicht</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" style="color: black" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>aan de slag</strong></a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" style="color: black" href="ontstaan.html">onstaan</a></li>
+                <li><a class="dropdown-item" style="color: black" href="voordelen.html">voordelen</a></li>
+                <li><a class="dropdown-item" style="color: black" href="desem_maken.html">desem maken</a></li>
+                <li><a class="dropdown-item" style="color: black" href="desem_bakken.html">brood bakken</a></li>
+                <li><a class="dropdown-item" style="color: black" href="recepten.html">recepten</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" style="color: black" href="toebehoren.html">toebehoren</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" style="color: black" href="contact.html">contact</a>
+            </li>
+            <ul>
+            <form class="d-flex" role="search">
+            <input class="form-control me-2 bg-light text-uppercase navbar-nav" type="search" placeholder="zoeken" style="text-align: right"   aria-label="Search">
+            <!--<button class="btn btn-sm btn-outline-secondary" type="submit">zoeken</button>-->
+            </form>
+            </ul>
+        </ul>  
+        </div>
+        </div>
+    </nav>
+
+    <hr>
+
+    <figure class="pt-3 pb-5">
+        <img src="images/desem_ontstaan.jpg" alt="desembrood" style="width: 100%;" class="img-fluid img-center" >
+        <figcaption>Desembrood</figcaption>
+    </figure>
+
+    <p>
+        <h1 class="text-decoration-underline">Ontstaan van desem:</h1> 
+    </p>
+    <p>Desem, als een natuurlijke fermentatiemethode voor brood, is al duizenden jaren oud en de precieze oorsprong is moeilijk te traceren. Het is ontstaan over verschillende regio's en tijdperken in de geschiedenis. Hier zijn enkele belangrijke punten met betrekking tot de oorsprong van desem:</p> 
+  
+    <p>
+        <h3>Verspreiding</h3> 
+    </p>
+    <ul>
+    <li>Oude beschavingen: Desem lijkt zijn oorsprong te hebben in oude beschavingen, zoals die in Egypte en Mesopotamië (het huidige Midden-Oosten). Archeologische vondsten en historische teksten suggereren dat deze samenlevingen al gebruikmaakten van gefermenteerd deeg om brood te bakken, mogelijk al zo'n 6000 jaar geleden.</li> 
+    <li>Onafhankelijke ontwikkeling: Het op natuurlijke wijze fermenteren van deeg lijkt onafhankelijk te zijn ontwikkeld in verschillende delen van de wereld. Verschillende culturen hebben hun eigen versies van desem ontwikkeld, vaak gebruikmakend van de lokale beschikbare granen en omgevingsgisten.</li>   
+    <li>Verspreiding: Naarmate beschavingen zich verspreidden en handel dreef, werd desem een alomtegenwoordige techniek voor broodbakken in veel delen van de wereld. Dit omvatte delen van Europa, het Midden-Oosten, en later ook andere regio's.</li>   
+    <li>Continu gebruik: Ondanks de opkomst van commerciële gist in de moderne tijd, blijft desem populair bij veel bakkers en thuisbakkers vanwege de unieke smaak en textuur die het aan brood geeft. Het is een ambachtelijke methode die tot op de dag van vandaag wordt gekoesterd en geperfectioneerd.</li>   
+    </ul>
+    <p>Over het algemeen is desem een historische en wereldwijde traditie van broodbakken. Hoewel de exacte oorsprong moeilijk vast te stellen is, heeft desem een rijke geschiedenis en blijft het een belangrijk onderdeel van de culinaire traditie in veel culturen over de hele wereld.</p>
+
+    <h4 class="pt-4 pb-1">Map ontstaan desem</h4>
+
+    <section id="map" class="row">
+      <div id="sourd_orig" class="col-12 col-md-9 col-sm-6 mb-3"></div>
+    </section>
+    
+    <hr style="padding: 8px;">
+
+
+    <table class="onderschrift" style="font-size:medium; color: white">
+        <thead></thead>
+        <tbody>
+        <tr>
+            <td style="padding-bottom: 20px; padding-top: 10px; padding-left: 10px;">Didier Petit</td>
+            <td></td>
+            <td style="padding-bottom: 20px; text-align: right; padding-top: 10px; padding-right: 10px;">Tel: 03/650.00.01</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="padding-left: 10px;">Bredabaan 388</td>
+            <td></td>
+            <td style="text-align: right; padding-right: 10px;">HRA 333999</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 10px; padding-bottom: 10px;">2930 - Brasschaat</td>
+            <td></td>
+            <td style="text-align: right; padding-right: 10px; padding-bottom: 10px;">BE 0803.444.684</td>
+        </tr>
+    </tbody>
+
+    </table>
+
+    <hr>
+
+</body>

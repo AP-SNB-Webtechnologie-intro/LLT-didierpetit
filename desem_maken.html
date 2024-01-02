@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+<!-- Required meta tags -->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Broodnodig - zelf desem maken</title>
+<meta name="description" content="Website over het bakken van natuurbrood met desem">
+<meta name="keywords" content="brood, broodbakken, broodmes, broodnodig, tarwe, rogge, spelt, mais, desem, zuurddesem, levin, voordeeg, moederdeeg">
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+ <!-- Bootstrap CSS icons: https://icons.getbootstrap.com/#usage -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ <!-- JavaScript: Bootstrap Bundle with Popper -->
+ <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+ <!-- eigen geschreven css voor jouw html-bestand -->
+ <link href="./css/style.css" rel="stylesheet">
+ <!-- LEAFLET -->
+ <!-- voeg het leaflet css-bestand toe om de kaart van standaard opmaak te voorzien -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="  crossorigin=""/>
+ <!-- voeg het mapStyle.css bestand toe. Hierin zetten we alle css specifiek voor de kaart -->
+ <link rel="stylesheet" href="css/mapStyle.css">
+ <!-- voeg de leaflet.js javascript toe aan de pagina en check de integriteit ervan -->
+ <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ <!-- voeg het mapScript.js script toe aan de pagina en laad het als de pagina geladen is. -->
+<script defer src="js/sourd_orig.js"></script>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example col-12 col-md-9 col-sm-6 col-md-4 mx-auto" style="font-family: sans-serif">
+    <nav class="navbar navbar-expand-lg text-uppercase" >
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse active" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" style="color: black" aria-current="page" href="index.html">home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: black" href="overzicht.html">overzicht</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link" style="color: black" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false"><strong>aan de slag</strong></a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" style="color: black" href="ontstaan.html">onstaan</a></li>
+                <li><a class="dropdown-item" style="color: black" href="voordelen.html">voordelen</a></li>
+                <li><a class="dropdown-item" style="color: black" href="desem_maken.html">desem maken</a></li>
+                <li><a class="dropdown-item" style="color: black" href="desem_bakken.html">brood bakken</a></li>
+                <li><a class="dropdown-item" style="color: black" href="recepten.html">recepten</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+            <a class="nav-link" style="color: black" href="toebehoren.html">toebehoren</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" style="color: black" href="contact.html">contact</a>
+            </li>
+            <ul>
+            <form class="d-flex" role="search">
+            <input class="form-control me-2 bg-light text-uppercase navbar-nav" type="search" placeholder="zoeken" style="text-align: right"   aria-label="Search">
+            <!--<button class="btn btn-sm btn-outline-secondary" type="submit">zoeken</button>-->
+            </form>
+            </ul>
+        </ul>  
+        </div>
+        </div>
+    </nav>
+
+    <hr>
+
+    <figure class="pt-3 pb-5">
+        <img src="images/desemstarter.jpg" alt="desemstarter" style="width: 100%;" class="img-fluid img-center" >
+        <figcaption>Desemstarter van rogge en tarwe</figcaption>
+    </figure>
+    <p>
+        <h1>Hoe zelf een desem maken?</h1> 
+    </p>
+   <table> 
+   <thead>
+    <ul>
+    <p><h3>Ingrediënten:</h3></p>
+    <li>Volkorenmeel (bijvoorbeeld rogge- of tarwemeel)</li>
+    <li>Water</li>
+    <li>Een glazen pot of plastic bakje</li>
+</ul></thead>
+   <tbody>
+        <tr>
+            <td width="80%">
+            
+            <ol>
+                <p>
+                    <h4 class="text-decoration-underline">Stap 1: Dag 1 - Het starten van je desem:</h4> 
+                </p>
+                <li>Meng 30 gram volkorenmeel met 30 ml water in een glazen pot of plastic bakje. Roer goed tot het een gladde pap wordt.</li>
+                <li>Dek de pot losjes af met een schone doek of plasticfolie, zodat er lucht kan circuleren, maar er geen insecten binnenkomen.</li>
+                <li>Laat dit mengsel 24 uur op kamertemperatuur staan.</li>
+           
+        
+            <p>
+                <h4 class="text-decoration-underline">Stap 2: Dag 2 - Voeden van de desem:</h4> 
+            </p>
+            <li>Controleer het mengsel na 24 uur. Het moet licht belucht en enigszins zurig ruiken.</li> 
+            <li>Neem 15gr van dag 1 en voeg opnieuw 30 gram volkorenmeel en 30 ml water toe aan de pot. Roer het geheel goed door.</li>     
+        
+            <p>
+                <h4 class="text-decoration-underline">Stap 3: Herhaal en onderhoud:</h4> 
+            </p>
+            <li>Herhaal stap 2 (voeden) dagelijks gedurende ongeveer 11-13 dagen, afhankelijk van de omstandigheden. De desem zal tijdens deze dagen actiever worden en een sterker aroma ontwikkelen.</li> 
+            
+            <p>
+                <h4 class="text-decoration-underline">Stap 4: Het gebruik van je desem:</h4> 
+            </p>
+            <li>Zodra je desem actief is (het zou in omvang moeten toenemen en luchtbellen vertonen), kun je het gebruiken om brood te bakken.</li> 
+            <li>Voor het brooddeeg meng je een deel van je desemstarter met meel en water volgens een recept voor zuurdesembrood. Het exacte recept hangt af van wat voor soort brood je wilt maken.</li> 
+            <li>Nadat je brooddeeg is gerezen, kun je het bakken zoals aangegeven in het recept.</li>
+        
+            <p>
+                <h4 class="text-decoration-underline">Stap 5: Onderhoud van je desem:</h4> 
+            </p>
+            <li>Als je desem actief is en je wilt het blijven gebruiken, moet je het regelmatig blijven voeden. Dit kan betekenen dat je dagelijks een deel weggooit en opnieuw voedt of het in de koelkast bewaart en wekelijks voedt.</li> 
+            </ol>
+        
+               
+        
+            <p>Onthoud dat het maken en onderhouden van desem enigszins een leerproces kan zijn, en het kan even duren voordat je de perfecte balans van voeding en timing hebt gevonden. Desembrood bakken vereist wat geduld en experimentatie, maar het resultaat is vaak de moeite waard vanwege de heerlijke smaak en textuur. Veel succes met je desemavontuur!</p>
+        
+        </td>
+        <td>
+    <figure><img src="images/dag1en2.webp" style=" vertical-align: top; padding-left: 10px;" class="img-fluid img-center" alt="rijsmandjes"></figure>
+    <figure><img src="images/dag3.webp" style=" vertical-align: top; padding-left: 10px;" class="img-fluid img-center" alt="weegschaal"></figure>
+    <figure><img src="images/dag4.webp" style=" vertical-align: top; padding-left: 10px;" class="img-fluid img-center" alt="schietplank & schraper"></figure>
+    <figure><img src="images/dag5.webp" style=" vertical-align: top; padding-left: 10px;" class="img-fluid img-center" alt="thermometers"></figure>
+    <figure><img src="images/dag6.webp" style=" vertical-align: top; padding-left: 10px;" class="img-fluid img-center" alt="steenoven"></figure>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+
+
+
+    
+    <h4 class="pt-4 pb-1">Zelf desem maken:</h4>
+    <table class="table table-striped table-hover table-sm ">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" class="text-center">Meel</th>
+                <th scope="col" class="text-center">Water</th>
+                <th scope="col" class="text-center">Desem</th>
+                <th scope="col" class="text-center">Totaal</th>
+                <th scope="col" class="text-center">Verhouding</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Dag 1</th>
+                <td scope="row" class="text-center">30gr</td>
+                <td scope="row" class="text-center">30ml</td>
+                <td scope="row" class="text-center">-</td>
+                <td scope="row" class="text-center">60gr</td>
+                <td scope="row" class="text-center">1:1</td>
+                
+            </tr>
+            <tr>
+                <th scope="row">Dag 2</th>
+                <td scope="row" class="text-center">30gr</td>
+                <td scope="row" class="text-center">30ml</td>
+                <td scope="row" class="text-center">15gr</td>
+                <td scope="row" class="text-center">75gr</td>
+                <td scope="row" class="text-center">1:2:2</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Dag 3 - 13</th>
+                <td scope="row" class="text-center">30gr</td>
+                <td scope="row" class="text-center">30ml</td>
+                <td scope="row" class="text-center">15gr</td>
+                <td scope="row" class="text-center">75gr</td>
+                <td scope="row" class="text-center">1:2:2</td>
+            </tr>
+            <tr>
+                <th scope="row">Dag 14</th>
+                <td scope="row" class="text-center">30gr</td>
+                <td scope="row" class="text-center">30ml</td>
+                <td scope="row" class="text-center">15gr</td>
+                <td scope="row" class="text-center">75gr</td>
+                <td scope="row" class="text-center">1:2:2</td>
+            </tr>
+            <tr>
+                <th scope="row">Dag 15+</th>
+                <td scope="row" class="text-center">30gr</td>
+                <td scope="row" class="text-center">30ml</td>
+                <td scope="row" class="text-center">15gr</td>
+                <td scope="row" class="text-center">75gr</td>
+                <td scope="row" class="text-center">1:2:2</td>
+            </tr>
+           
+        </tbody>
+        <caption>Recept moederdesem maken</caption>
+     </table>
+    <hr style="padding: 8px;">
+
+
+    <table class="onderschrift" style="font-size:medium; color: white">
+        <thead></thead>
+        <tbody>
+        <tr>
+            <td style="padding-bottom: 20px; padding-top: 10px; padding-left: 10px;">Didier Petit</td>
+            <td></td>
+            <td style="padding-bottom: 20px; text-align: right; padding-top: 10px; padding-right: 10px;">Tel: 03/650.00.01</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="padding-left: 10px;">Bredabaan 388</td>
+            <td></td>
+            <td style="text-align: right; padding-right: 10px;">HRA 333999</td>
+        </tr>
+        <tr>
+            <td style="padding-left: 10px; padding-bottom: 10px;">2930 - Brasschaat</td>
+            <td></td>
+            <td style="text-align: right; padding-right: 10px; padding-bottom: 10px;">BE 0803.444.684</td>
+        </tr>
+    </tbody>
+
+    </table>
+
+    <hr>
+
+</body>
